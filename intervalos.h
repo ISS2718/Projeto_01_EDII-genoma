@@ -5,7 +5,6 @@ typedef struct {
 
 typedef struct {
     long **intervalo;
-    //long tamanho;
 } lista;
 
 void criar(lista *l, long n);

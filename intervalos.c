@@ -12,7 +12,11 @@ void criar(lista *l, long n) {
 }
 
 void destruir(lista *l, int n) {
-    
+    for(long j=0; j<n; j++){
+        free(l->intervalo[j]);
+    }
+    free(l->intervalo);
+    free(l);
 }
 
 long ** ordenaDigitos(long **A, long n, long posicao){
@@ -43,6 +47,7 @@ long ** ordenaDigitos(long **A, long n, long posicao){
         A[i][0] = C->intervalo[i][0];
         A[i][1] = C->intervalo[i][1];
     }
+    destruir(C,n);
     return A;
 }
 
