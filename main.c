@@ -9,7 +9,7 @@ int main(void) {
     FILE* pos_genes = fopen("projeto_1_dados/pos_genes_grande.csv", "r");
     char linha[1024];
     int n = TAM;
-    lista *l = malloc(sizeof(lista)); ;
+    lista *l = malloc(sizeof(lista));
     criar(l,n);
     char *num2 = calloc(100,sizeof(char));
     char *num2_original = num2;
