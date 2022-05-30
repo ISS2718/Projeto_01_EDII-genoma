@@ -66,3 +66,25 @@ long ** ordenaNumeros(long **A, long n){
     }
     return A;
 }
+
+void contagemIntersecoes(FILE A, FILE B, long nA, long nB){
+    //recebe A.txt e B.txt nao ordenados
+    // recebe numero de linhas de A e de B (na, nb)
+    long A[nA][2];
+    long B [nB][2];
+    long inicio;
+    long fim;
+
+    long contagens[nA];
+    for(int i = 0; i<nA; i++){
+        contagens[i] = 0;
+    }
+
+    for(int i = 0; i<nA; i++){
+        //ler uma linha de A.txt determinando inicio e fim do intervalo
+        //A[i][0] = inicio;
+        //A[i][1] = fim;
+    }
+
+    //retorna contagens.txt (numero de intervalos em B em cada intervalo de A)
+}
