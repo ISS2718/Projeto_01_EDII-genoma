@@ -6,27 +6,28 @@
 #include <math.h>
 
 int main(void) {
-    FILE* pos_genes = fopen("projeto_1_dados/pos_genes_grande.csv", "r");
-    char linha[1024];
-    int n = TAM;
-    lista *l = malloc(sizeof(lista)); ;
-    criar(l,n);
-    char *num2 = calloc(100,sizeof(char));
-    char *num2_original = num2;
-    for(int i=0; i<n; i++){
-        fgets(linha, 1024, pos_genes);
-        long inicio = strtol(linha, &num2,10);
-        num2[0] = ' ';
-        long fim = strtol(num2, &num2,10);
-        l->intervalo[i][0] = inicio;
-        l->intervalo[i][1] = fim;        
-        //printf("%d %d\n", l->intervalo[i][0], l->intervalo[i][1]);
-    }
-  free(num2_original);
-    l->intervalo = ordenaNumeros(l->intervalo, n);
-    for(int i=0; i<n; i++){
-        printf("%ld %ld\n", l->intervalo[i][0], l->intervalo[i][1]);
-    }
-    destruir(l,n);
-  fclose(pos_genes);
+  FILE* A_file = fopen("projeto_1_dados/A.csv", "r");
+  FILE* B_file = fopen("projeto_1_dados/B.csv", "r");
+  lista *A = malloc(sizeof(lista));
+  lista *B = malloc(sizeof(lista));
+  
+  criar(A,TAM);
+  criar(B, TAM);
+
+  insere_intervalos(A, TAM, A_file);
+  insere_intervalos(B, TAM, B_file);
+  
+  A->intervalo = ordenaNumeros(A->intervalo, TAM);
+  B->intervalo = ordenaNumeros(B->intervalo, TAM);
+  for(int i=0; i<TAM; i++){
+    printf("%ld %ld\n", A->intervalo[i][0], A->intervalo[i][1]);
+  }
+
+  for(int i=0; i<TAM; i++){
+    printf("%ld %ld\n", B->intervalo[i][0], B->intervalo[i][1]);
+  }
+  destruir(A,TAM);
+  destruir(B,TAM);
+  fclose(A_file);
+  fclose(B_file);
 }

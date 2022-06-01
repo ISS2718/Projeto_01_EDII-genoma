@@ -19,6 +19,22 @@ void destruir(lista *l, int n) {
     free(l);
 }
 
+void insere_intervalos (lista *l, long tamanho_lista,  FILE* entrada) {
+    char *linha = malloc(sizeof(char) * 1024);
+    char *num2 = calloc(100,sizeof(char));
+    char *num2_original = num2;
+    for(int i=0; i<tamanho_lista; i++){
+        fgets(linha, 1024, entrada);
+        long inicio = strtol(linha, &num2,10);
+        num2[0] = ' ';
+        long fim = strtol(num2, &num2,10);
+        l->intervalo[i][0] = inicio;
+        l->intervalo[i][1] = fim;        
+        //printf("%d %d\n", l->intervalo[i][0], l->intervalo[i][1]);
+    }
+  free(num2_original);
+}
+
 long ** ordenaDigitos(long **A, long n, long posicao){
     long B[10] = {0,0,0,0,0,0,0,0,0,0};
     //printf("Posicao: %d", posicao);
