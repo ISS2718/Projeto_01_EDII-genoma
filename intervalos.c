@@ -108,6 +108,13 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
         printf("%ld %ld\n", B->intervalo[i][0], B->intervalo[i][1]);
     }
 
+    long primeiro_iB = 0;
+    for (int iA=0; iA<nA; iA++){
+        for(int iB=0;iB< nA; iB++){
+
+        }
+    }
+
     
     //retorna contagens.txt (numero de intervalos em B em cada intervalo de A)
 }
