@@ -67,24 +67,47 @@ long ** ordenaNumeros(long **A, long n){
     return A;
 }
 
-void contagemIntersecoes(FILE A, FILE B, long nA, long nB){
+void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     //recebe A.txt e B.txt nao ordenados
     // recebe numero de linhas de A e de B (na, nb)
-    long A[nA][2];
-    long B [nB][2];
     long inicio;
     long fim;
 
-    long contagens[nA];
-    for(int i = 0; i<nA; i++){
-        contagens[i] = 0;
-    }
+    long *contagens = calloc(nA, sizeof(long));
+    
+    FILE* fA = fopen(arquivo_A, "r");
+    lista *A = malloc(sizeof(lista));
+    criar(A, nA);
+
+    FILE* fB = fopen(arquivo_B, "r");
+    lista *B = malloc(sizeof(lista));
+    criar(B, nB);
+
 
     for(int i = 0; i<nA; i++){
+        fscanf(fA,"%ld,%ld", &(A->intervalo[i][0]), &(A->intervalo[i][1]));
         //ler uma linha de A.txt determinando inicio e fim do intervalo
         //A[i][0] = inicio;
         //A[i][1] = fim;
     }
+    for(int i = 0; i<nB; i++){
+        fscanf(fB,"%ld,%ld", &(B->intervalo[i][0]), &(B->intervalo[i][1]));
+        //ler uma linha de A.txt determinando inicio e fim do intervalo
+        //A[i][0] = inicio;
+        //A[i][1] = fim;
+    }
+    fclose(A);
 
+    A->intervalo = ordenaNumeros(A->intervalo, nA);
+    B->intervalo = ordenaNumeros(B->intervalo, nB);
+
+    for(int i=0; i<nA; i++){
+        printf("%ld %ld\n", A->intervalo[i][0], A->intervalo[i][1]);
+    }
+    for(int i=0; i<nB; i++){
+        printf("%ld %ld\n", B->intervalo[i][0], B->intervalo[i][1]);
+    }
+
+    
     //retorna contagens.txt (numero de intervalos em B em cada intervalo de A)
 }
