@@ -1,12 +1,14 @@
 #define TAM 100
 #include "intervalos.h"
+#include "ctrl_F.h"
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 int main(void) {
-    FILE* pos_genes = fopen("projeto_1_dados/pos_genes_pequeno.csv", "r");
+  ctrlF ("projeto_1_dados/genoma_pequeno.txt", "projeto_1_dados/fragmentos_pequeno.txt", "projeto_1_dados/saida.txt");
+    /*FILE* pos_genes = fopen("projeto_1_dados/pos_genes_pequeno.csv", "r");
     char linha[1024];
     int n = TAM;
     lista *l = malloc(sizeof(lista));
@@ -29,5 +31,5 @@ int main(void) {
     }
     destruir(l,n);
   fclose(pos_genes);
-  contagemIntersecoes("projeto_1_dados/pos_genes_pequeno.csv", "projeto_1_dados/pos_genes_pequeno.csv", TAM, TAM);
+  contagemIntersecoes("projeto_1_dados/pos_genes_pequeno.csv", "projeto_1_dados/pos_genes_pequeno.csv", TAM, TAM);*/
 }

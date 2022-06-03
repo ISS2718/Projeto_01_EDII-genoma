@@ -1,3 +1,5 @@
+#ifndef __INTERVALOS__
+#define __INTERVALOS__
 typedef struct {
     long *inicio;
     long *fim;
@@ -12,3 +14,4 @@ void destruir(lista *l, int n);
 long ** ordenaDigitos(long **A, long n, long posicao);
 long ** ordenaNumeros(long **A, long n);
 void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB);
+#endif

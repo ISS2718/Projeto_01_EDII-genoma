@@ -96,7 +96,7 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
         //A[i][0] = inicio;
         //A[i][1] = fim;
     }
-    fclose(A);
+    fclose(fA);
 
     A->intervalo = ordenaNumeros(A->intervalo, nA);
     B->intervalo = ordenaNumeros(B->intervalo, nB);
