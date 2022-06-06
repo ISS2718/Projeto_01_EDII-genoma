@@ -110,11 +110,18 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
 
     long primeiro_iB = 0;
     for (int iA=0; iA<nA; iA++){
-        for(int iB=0;iB< nA; iB++){
-
+        for(int iB=primeiro_iB; iB< nB; iB++){
+            if(A[iA][1] < B[iB][0] || A[iA][0] > B[iB][1]){
+                if(contagens[iA] == 0){
+                    primeiro_iB = iB;
+                }
+                else{
+                    contagens[iA] = contagens[iA] + 1;
+                }
+            }
         }
     }
-
-    
-    //retorna contagens.txt (numero de intervalos em B em cada intervalo de A)
+    for(int i = 0; i < nA: i++){
+        //escrever contagens[i] em contagens.txt;
+    }
 }
