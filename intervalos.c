@@ -95,6 +95,8 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
         //ler uma linha de A.txt determinando inicio e fim do intervalo
         //A[i][0] = inicio;
         //A[i][1] = fim;
+        //A->intervalo[i][0] = inicio;?
+        //A->intervalo[i][1] = fim;?
     }
     fclose(fA);
 
