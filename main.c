@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(void) {
-  ctrlF ("projeto_1_dados/genoma_pequeno.txt", "projeto_1_dados/fragmentos_pequeno.txt", "projeto_1_dados/saida.txt");
-    /*FILE* pos_genes = fopen("projeto_1_dados/pos_genes_pequeno.csv", "r");
+int main() {
+  /*ctrlF ("projeto_1_dados/genoma_pequeno.txt", "projeto_1_dados/fragmentos_pequeno.txt", "projeto_1_dados/saida.txt");*/
+    FILE* pos_genes = fopen("projeto_1_dados/pos_genes_pequeno.csv", "r");
     char linha[1024];
     int n = TAM;
     lista *l = malloc(sizeof(lista));
@@ -29,7 +29,7 @@ int main(void) {
     for(int i=0; i<n; i++){
         //printf("%ld %ld\n", l->intervalo[i][0], l->intervalo[i][1]);
     }
-    destruir(l,n);
+  destruir(l,n);
   fclose(pos_genes);
-  contagemIntersecoes("projeto_1_dados/pos_genes_pequeno.csv", "projeto_1_dados/pos_genes_pequeno.csv", TAM, TAM);*/
+  contagemIntersecoes("A.csv", "B.csv", 2, 2);
 }

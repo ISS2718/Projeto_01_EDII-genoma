@@ -3,7 +3,7 @@
 void criar_texto (texto* text, char* arquivo) {
  FILE* A = fopen (arquivo, "r");
  text->txt = malloc(TAM_TXT * sizeof(char));
- fscanf (A, "%s", &text->txt);
+ fscanf (A, "%s", text->txt);
  fclose (A);
 }
 
