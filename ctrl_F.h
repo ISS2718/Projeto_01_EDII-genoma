@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAM_TXT 1000
+#define TAM_TXT 1000000
 
 typedef struct {
     char* txt;

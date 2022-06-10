@@ -7,7 +7,7 @@
 #include <math.h>
 
 int main(void) {
-  ctrlF ("projeto_1_dados/genoma_pequeno.txt", "projeto_1_dados/fragmentos_pequeno.txt", "projeto_1_dados/saida.txt");
+  ctrlF ("projeto_1_dados/genoma_grande.txt", "projeto_1_dados/fragmentos_grande.txt", "projeto_1_dados/saida.txt");
     /*FILE* pos_genes = fopen("projeto_1_dados/pos_genes_pequeno.csv", "r");
     char linha[1024];
     int n = TAM;

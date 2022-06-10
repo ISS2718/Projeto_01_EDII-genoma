@@ -101,22 +101,23 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     A->intervalo = ordenaNumeros(A->intervalo, nA);
     B->intervalo = ordenaNumeros(B->intervalo, nB);
 
-    for(int i=0; i<nA; i++){
+    /*for(int i=0; i<nA; i++){
         printf("%ld %ld\n", A->intervalo[i][0], A->intervalo[i][1]);
     }
     for(int i=0; i<nB; i++){
         printf("%ld %ld\n", B->intervalo[i][0], B->intervalo[i][1]);
-    }
+    }*/
 
     long primeiro_iB = 0;
-    for (int iA = 0; iA < nA; iA++){
+    for (long iA = 0; iA < nA; iA++){
         for(long iB = primeiro_iB; iB < nB; iB++){
             if(A->intervalo[iA][1] < B->intervalo[iB][0] || A->intervalo[iA][0] > B->intervalo[iB][1]){
                 if(contagens[iA] == 0){
                     primeiro_iB = iB;
+                    contagens[iA]++;
                 }
                 else{
-                    contagens[iA] = contagens[iA] + 1;
+                    contagens[iA]++;
                 }
             }
         }
