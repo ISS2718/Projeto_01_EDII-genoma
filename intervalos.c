@@ -84,29 +84,30 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     criar(B, nB);
 
 
-    for(int i = 0; i<nA; i++){
+    for(long i = 0; i<nA; i++){
         fscanf(fA,"%ld,%ld", &(A->intervalo[i][0]), &(A->intervalo[i][1]));
         //ler uma linha de A.txt determinando inicio e fim do intervalo
         //A[i][0] = inicio;
         //A[i][1] = fim;
     }
-    for(int i = 0; i<nB; i++){
+    for(long i = 0; i<nB; i++){
         fscanf(fB,"%ld,%ld", &(B->intervalo[i][0]), &(B->intervalo[i][1]));
         //ler uma linha de A.txt determinando inicio e fim do intervalo
         //A[i][0] = inicio;
         //A[i][1] = fim;
     }
     fclose(fA);
+    fclose(fB);
 
     A->intervalo = ordenaNumeros(A->intervalo, nA);
     B->intervalo = ordenaNumeros(B->intervalo, nB);
 
-    /*for(int i=0; i<nA; i++){
+    for(long i=0; i<nA; i++){
         printf("%ld %ld\n", A->intervalo[i][0], A->intervalo[i][1]);
     }
-    for(int i=0; i<nB; i++){
+    for(long i=0; i<nB; i++){
         printf("%ld %ld\n", B->intervalo[i][0], B->intervalo[i][1]);
-    }*/
+    }
 
     long primeiro_iB = 0;
     for (long iA = 0; iA < nA; iA++){
@@ -127,8 +128,12 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     file = fopen("contagens.txt", "w");
 
     for(int i = 0; i < nA; i++){
-        fprintf(file, "%ld", contagens[i]); 
+        printf("%ld\n", contagens[i]);
+        fprintf(file, "%ld\n", contagens[i]); 
         //escreve contagens[i] em contagens.txt;
     }
     fclose(file);
+    free(A);
+    free(B);
+    free(contagens);
 }
