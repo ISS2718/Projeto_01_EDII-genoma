@@ -7,22 +7,26 @@
 
 int main(void) {
 
-  char* arquivo_genoma = malloc (255 * sizeof(char));
-  char* arquivo_pos_genes = malloc (255 * sizeof(char));
-  char* arquivo_fragmentos = malloc (255 * sizeof(char));
-  char* arquivo_pos_fragmentos = malloc (255 * sizeof(char));
-  char* arquivo_saida = malloc (255 * sizeof(char));
-  long n_genes;
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_pequeno.csv", "./projeto_1_dados/fragmentos_pequeno.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_pequeno.csv", "./projeto_1_dados/fragmentos_pequeno.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_pequeno.csv", "./projeto_1_dados/fragmentos_pequeno.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
 
-  scanf ("%s %s %s %s %s %ld", arquivo_genoma,  arquivo_pos_genes, arquivo_fragmentos, arquivo_pos_fragmentos, arquivo_saida, &n_genes);
-  ContagemLeituras (arquivo_genoma, arquivo_pos_genes, arquivo_fragmentos, 
-    arquivo_pos_fragmentos, n_genes, arquivo_saida);
-  
-  free (arquivo_genoma);
-  free (arquivo_pos_genes);
-  free (arquivo_fragmentos);
-  free (arquivo_pos_fragmentos);
-  free (arquivo_saida);
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_pequeno.csv", "./projeto_1_dados/fragmentos_pequeno.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_pequeno.csv", "./projeto_1_dados/fragmentos_pequeno.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_pequeno.csv", "./projeto_1_dados/fragmentos_pequeno.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+
+  ContagemLeituras ("./projeto_1_dados/genoma_pequeno.txt", "./projeto_1_dados/pos_genes_grande.csv", "./projeto_1_dados/fragmentos_grande.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+  ContagemLeituras ("./projeto_1_dados/genoma_medio.txt", "./projeto_1_dados/pos_genes_grande.csv", "./projeto_1_dados/fragmentos_grande.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt");
+  ContagemLeituras ("./projeto_1_dados/genoma_grande.txt", "./projeto_1_dados/pos_genes_grande.csv", "./projeto_1_dados/fragmentos_grande.txt", 
+    "./pos_fragmentos.txt", 100,"./tividade_genica.txt"); 
 
   return 0;
 }
