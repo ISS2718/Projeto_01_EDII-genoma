@@ -19,6 +19,12 @@ void destruir(lista *l, int n) {
     free(l);
 }
 
+void inserir_arquivo(lista *l, int n, FILE * arquivo){
+    for(int i = 0; i<n; i++){
+        fscanf(arquivo,"%ld,%ld", &(l->intervalo[i][0]), &(l->intervalo[i][1]));
+    }
+}
+
 long ** ordenaDigitos(long **A, long n, long posicao){
     long B[10] = {0,0,0,0,0,0,0,0,0,0};
     //printf("Posicao: %d", posicao);
@@ -78,24 +84,11 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     FILE* fA = fopen(arquivo_A, "r");
     lista *A = malloc(sizeof(lista));
     criar(A, nA);
-
+    inserir_arquivo(A, nA, fA);
     FILE* fB = fopen(arquivo_B, "r");
     lista *B = malloc(sizeof(lista));
     criar(B, nB);
-
-
-    for(long i = 0; i<nA; i++){
-        fscanf(fA,"%ld,%ld", &(A->intervalo[i][0]), &(A->intervalo[i][1]));
-        //ler uma linha de A.txt determinando inicio e fim do intervalo
-        //A[i][0] = inicio;
-        //A[i][1] = fim;
-    }
-    for(long i = 0; i<nB; i++){
-        fscanf(fB,"%ld,%ld", &(B->intervalo[i][0]), &(B->intervalo[i][1]));
-        //ler uma linha de A.txt determinando inicio e fim do intervalo
-        //A[i][0] = inicio;
-        //A[i][1] = fim;
-    }
+    inserir_arquivo(B, nB, fB);
     fclose(fA);
     fclose(fB);
 
