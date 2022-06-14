@@ -13,7 +13,8 @@ void destruir_texto (texto* text) {
     text == NULL;
 }
 
-void ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
+long ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
+    long n_frag = 0; 
     texto *text = malloc (1*sizeof(texto));
     criar_texto (text, arquivo_texto);
     texto *trecho = malloc (1*sizeof(texto));
@@ -35,6 +36,7 @@ void ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
                 if ((trecho->txt[j+1] == '\0')) { //verificando se o proximo caracter é o fim do trecho
                     fprintf (f_saida, "%ld,%ld\n", i, (i+j-1));
                     //break; //não quebra o laço na primeira aparição do trecho
+                    n_frag++;
                 }   
             }
             i++;
@@ -45,4 +47,5 @@ void ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
     fclose(f_saida);
     destruir_texto(text);
     destruir_texto(trecho);
+    return n_frag;
 }

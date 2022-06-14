@@ -1,4 +1,4 @@
-#define TAM 100
+#define TAM 10000
 #include "intervalos.h"
 #include "ctrl_F.h"
 #include <time.h>
@@ -7,7 +7,10 @@
 #include <math.h>
 
 void main(void) {
-  ctrlF ("projeto_1_dados/genoma_grande.txt", "projeto_1_dados/fragmentos_grande.txt", "projeto_1_dados/saida.txt");
+  long n_frag = ctrlF ("projeto_1_dados/genoma_medio.txt", "projeto_1_dados/fragmentos_pequeno.txt", "projeto_1_dados/pos_fragmentos.txt");
+  printf("n_frag: %ld\n", n_frag);
+  system("pause");
+  contagemIntersecoes("projeto_1_dados/pos_genes_grande.csv", "projeto_1_dados/pos_fragmentos.txt", TAM, n_frag);
     /*FILE* pos_genes = fopen("projeto_1_dados/pos_genes_pequeno.csv", "r");
     char linha[1024];
     int n = TAM;
@@ -30,6 +33,5 @@ void main(void) {
         //printf("%ld %ld\n", l->intervalo[i][0], l->intervalo[i][1]);
     }
   destruir(l,n);
-  fclose(pos_genes);
-  contagemIntersecoes("A.csv", "B.csv", 2, 2);*/
+  fclose(pos_genes);*/
 }

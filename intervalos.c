@@ -102,12 +102,12 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     A->intervalo = ordenaNumeros(A->intervalo, nA);
     B->intervalo = ordenaNumeros(B->intervalo, nB);
 
-    for(long i=0; i<nA; i++){
+    /*for(long i=0; i<nA; i++){
         printf("%ld %ld\n", A->intervalo[i][0], A->intervalo[i][1]);
     }
     for(long i=0; i<nB; i++){
         printf("%ld %ld\n", B->intervalo[i][0], B->intervalo[i][1]);
-    }
+    }*/
 
     long primeiro_iB = 0;
     for (long iA = 0; iA < nA; iA++){

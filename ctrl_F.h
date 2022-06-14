@@ -12,5 +12,5 @@ typedef struct {
 
 void criar_texto (texto* text, char* arquivo);
 void destruir_texto (texto* text);
-void ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida );
+long ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida );
 #endif
