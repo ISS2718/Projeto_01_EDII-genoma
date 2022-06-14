@@ -73,7 +73,7 @@ long ** ordenaNumeros(long **A, long n){
     return A;
 }
 
-void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
+void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB, char* arquivo_saida){
     //recebe A.txt e B.txt nao ordenados
     // recebe numero de linhas de A e de B (na, nb)
     long inicio;
@@ -116,7 +116,7 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     }
 
     FILE *file;
-    file = fopen("contagens.txt", "w");
+    file = fopen(arquivo_saida, "w");
 
     for(int i = 0; i < nA; i++){
         fprintf(file, "%ld\n", contagens[i]); 

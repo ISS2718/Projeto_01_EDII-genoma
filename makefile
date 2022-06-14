@@ -1,7 +1,10 @@
 all: TrabalhoED2
 
-TrabalhoED2: intervalos.o ctrl_F.o main.o
-	gcc -o TrabalhoED2 intervalos.o ctrl_F.o main.o
+TrabalhoED2: genoma.o intervalos.o ctrl_F.o main.o
+	gcc -o TrabalhoED2 genoma.o intervalos.o ctrl_F.o main.o
+
+genoma.o: genoma.c
+	gcc -o genoma.o -c genoma.c
 
 intervalos.o: intervalos.c
 	gcc -o intervalos.o -c intervalos.c
@@ -13,7 +16,8 @@ main.o: main.c
 	gcc -o main.o -c main.c
 
 clear:
-	rm *.o *.exe
+	rm *.o *.exe ./*.txt
+	clear
 
 run: 
 	./TrabalhoED2

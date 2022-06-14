@@ -15,5 +15,5 @@ void destruir(lista *l, int n);
 void inserir_arquivo(lista *l, int n, FILE * arquivo);
 long ** ordenaDigitos(long **A, long n, long posicao);
 long ** ordenaNumeros(long **A, long n);
-void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB);
+void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB, char* arquivo_saida);
 #endif

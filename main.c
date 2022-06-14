@@ -1,14 +1,28 @@
 #define TAM 100
-#include "intervalos.h"
-#include "ctrl_F.h"
+#include "genoma.h"
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void main(void) {
-  long n_frag = ctrlF ("projeto_1_dados/genoma_pequeno.txt", "projeto_1_dados/fragmentos_pequeno.txt", "projeto_1_dados/pos_fragmentos.txt");
-  printf("n_frag: %ld\n", n_frag);
-  system("pause");
-  contagemIntersecoes("projeto_1_dados/pos_genes_grande.csv", "projeto_1_dados/pos_fragmentos.txt", TAM, n_frag);
+int main(void) {
+
+  char* arquivo_genoma = malloc (255 * sizeof(char));
+  char* arquivo_pos_genes = malloc (255 * sizeof(char));
+  char* arquivo_fragmentos = malloc (255 * sizeof(char));
+  char* arquivo_pos_fragmentos = malloc (255 * sizeof(char));
+  char* arquivo_saida = malloc (255 * sizeof(char));
+  long n_genes;
+
+  scanf ("%s %s %s %s %s %ld", arquivo_genoma,  arquivo_pos_genes, arquivo_fragmentos, arquivo_pos_fragmentos, arquivo_saida, &n_genes);
+  ContagemLeituras (arquivo_genoma, arquivo_pos_genes, arquivo_fragmentos, 
+    arquivo_pos_fragmentos, n_genes, arquivo_saida);
+  
+  free (arquivo_genoma);
+  free (arquivo_pos_genes);
+  free (arquivo_fragmentos);
+  free (arquivo_pos_fragmentos);
+  free (arquivo_saida);
+
+  return 0;
 }
