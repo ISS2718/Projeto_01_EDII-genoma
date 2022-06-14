@@ -115,11 +115,9 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
             if(A->intervalo[iA][1] < B->intervalo[iB][0] || A->intervalo[iA][0] > B->intervalo[iB][1]){
                 if(contagens[iA] == 0){
                     primeiro_iB = iB;
-                    contagens[iA]++;
                 }
-                else{
+            } else {
                     contagens[iA]++;
-                }
             }
         }
     }
@@ -128,8 +126,8 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB){
     file = fopen("contagens.txt", "w");
 
     for(int i = 0; i < nA; i++){
-        printf("%ld\n", contagens[i]);
         fprintf(file, "%ld\n", contagens[i]); 
+        //printf("%ld\n", contagens[i]);
         //escreve contagens[i] em contagens.txt;
     }
     fclose(file);
