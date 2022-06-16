@@ -23,6 +23,15 @@ int main(void) {
   free (arquivo_fragmentos);
   free (arquivo_pos_fragmentos);
   free (arquivo_saida);
-
+  
   return 0;
 }
+
+/*
+./projeto_1_dados/genoma_pequeno.txt
+./projeto_1_dados/pos_genes_grande.csv
+./projeto_1_dados/fragmentos_grande.txt
+./pos_fragmentos_grande.txt
+./ativiade_genica
+10000
+*/
