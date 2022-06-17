@@ -32,6 +32,6 @@ int main(void) {
 ./projeto_1_dados/pos_genes_grande.csv
 ./projeto_1_dados/fragmentos_grande.txt
 ./pos_fragmentos_grande.txt
-./ativiade_genica
+./ativiade_genica.txt
 10000
 */

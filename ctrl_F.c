@@ -36,13 +36,13 @@ long ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
         long i = 0;
         while (text->txt[i] != '\0') {// enquanto um texto não chega ao fim
             long j = 0;
-            while ((trecho->txt[j] != '\0') && (trecho->txt[j] == text->txt[i+j])) {// enquanto o caracter do trecho for igual ao do texto
-                j++;
+            while ((trecho->txt[j] == text->txt[i+j])) {// enquanto o caracter do trecho for igual ao do texto
+                j++;  
                 if ((trecho->txt[j+1] == '\0')) { //verificando se o proximo caracter é o fim do trecho
-                    fprintf (f_saida, "%ld,%ld\n", i, (i+j-1));
-                    //break; //não quebra o laço na primeira aparição do trecho
+                    fprintf (f_saida, "%ld,%ld\n", i+1, (i+j));
                     n_frag++;
-                }   
+                    break; //quebra o laço para não precisar comparar se o trecho chegou ao fim
+                } 
             }
             i++;
         }
