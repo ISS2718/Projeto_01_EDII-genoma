@@ -1,4 +1,5 @@
 .\.vscode
+.\dados_testes
 *.rar
 *.zip
 *.exe
@@ -6,3 +7,5 @@
 projeto_1_dados/saida.txt
 .\exec
 .\TrabalhoED2
+.\Teste_Empirico_CTRL_F
+.\Teste_Empirico
