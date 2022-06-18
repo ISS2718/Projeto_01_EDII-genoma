@@ -103,7 +103,7 @@ int main(void) {
   fprintf (tempo, "------------------\n");
 
   // imprime tempo total em minutos e quantitade total de ciclos para execução do teste 
-  fprintf(tempo, "tempo TOTAL (minutos):  %.10lf\n", (((((double)clock() - ciclos_ini_fix)) / CLOCKS_PER_SEC)/(double) 60));
+  fprintf(tempo, "\ntempo TOTAL (minutos):  %.10lf\n", (((((double)clock() - ciclos_ini_fix)) / CLOCKS_PER_SEC)/(double) 60));
   fprintf (tempo, "Ciclos necessarios TOTAL: %ld", (clock() - ciclos_ini_fix));
 
   fclose(tempo);
