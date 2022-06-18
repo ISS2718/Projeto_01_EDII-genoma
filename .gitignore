@@ -1,11 +1,11 @@
-.\.vscode
-.\dados_testes
+./.vscode
+./dados_testes
 *.rar
 *.zip
 *.exe
 *.o
 projeto_1_dados/saida.txt
 .\exec
-.\TrabalhoED2
-.\Teste_Empirico_CTRL_F
-.\Teste_Empirico
+./TrabalhoED2
+./Teste_Empirico_CTRL_F
+./Teste_Empirico
