@@ -128,7 +128,7 @@ void contagemIntersecoes(char* arquivo_A, char* arquivo_B, long nA, long nB, cha
         //escreve contagens[i] em arquivo_saida;
     }
     fclose(file);
-    free(A);
-    free(B);
+    destruir(A, nA);
+    destruir(B, nB);
     free(contagens);
 }

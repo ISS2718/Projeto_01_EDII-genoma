@@ -32,7 +32,7 @@ long ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
     FILE *f_trechos = fopen(arquivo_trechos, "r");// abre o arquivo de trechos
 
     char *status = fgets(trecho->txt, TAM_TXT, f_trechos);// copia o primeiro trecho
-    while (status) {// enquanto o arquivo de trechos não chega ao fim
+    while (status) {// enquanto o arquivo de trechos não chega ao fim  
         long i = 0;
         while (text->txt[i] != '\0') {// enquanto um texto não chega ao fim
             long j = 0;
@@ -41,7 +41,7 @@ long ctrlF (char* arquivo_texto, char* arquivo_trechos, char* saida ) {
                 if ((trecho->txt[j+1] == '\0')) { //verificando se o proximo caracter é o fim do trecho
                     fprintf (f_saida, "%ld,%ld\n", i+1, (i+j));
                     n_frag++;
-                    break; //quebra o laço para não precisar comparar se o trecho chegou ao fim
+                    break; //quebra o laço pois o trecho chegou ao fim
                 } 
             }
             i++;

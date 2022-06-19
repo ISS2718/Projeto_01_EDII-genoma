@@ -6,6 +6,10 @@ TrabalhoED2: genoma.o intervalos.o ctrl_F.o main.o
 Teste_Empirico: genoma.o intervalos.o ctrl_F.o main_teste_empirico.o
 	gcc -o Teste_Empirico genoma.o intervalos.o ctrl_F.o main_teste_empirico.o
 
+Teste_Empirico_CTRL_F: genoma.o intervalos.o ctrl_F.o main_teste_CTRL_F.o
+	gcc -o Teste_Empirico_CTRL_F genoma.o intervalos.o ctrl_F.o main_teste_CTRL_F.o
+ 	
+
 genoma.o: genoma.c
 	gcc -o genoma.o -c genoma.c
 
@@ -14,6 +18,9 @@ intervalos.o: intervalos.c
 
 ctrl_F.o: ctrl_F.c
 	gcc -o ctrl_F.o -c ctrl_F.c
+
+main_teste_CTRL_F.o: main_teste_CTRL_F.c	
+	gcc -o main_teste_CTRL_F.o -c main_teste_CTRL_F.c
 
 main_teste_empirico.o: main_teste_empirico.c
 	gcc -o main_teste_empirico.o -c main_teste_empirico.c
@@ -30,3 +37,7 @@ run: TrabalhoED2
 
 teste: Teste_Empirico
 	./Teste_Empirico
+
+teste_CTRL_F: Teste_Empirico_CTRL_F
+	./Teste_Empirico_CTRL_F
+
