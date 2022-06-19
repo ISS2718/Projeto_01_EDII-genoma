@@ -4,7 +4,7 @@
 #include "genoma.h"
 
 int main(void) {
-  //entrada dos caminhos do aruivo de texto e da quantidade de genes
+  //entrada dos caminhos do arquivo de texto e da quantidade de genes
   char* arquivo_genoma = malloc (255 * sizeof(char));
   char* arquivo_pos_genes = malloc (255 * sizeof(char));
   char* arquivo_fragmentos = malloc (255 * sizeof(char));
