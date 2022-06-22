@@ -1,0 +1,40 @@
+---GENES___FRAGEMENTOS---
+---PEQUENO_PEQUENO---
+Ciclos necessarios: 51
+Tempo (segundos): 0.05099999999999999672484207735578820575028657913208
+---------------------
+---PEQUENO_MEDIO---
+Ciclos necessarios: 290
+Tempo (segundos): 0.28999999999999998001598555674718227237462997436523
+---------------------
+---PEQUENO_GRANDE---
+Ciclos necessarios: 2684
+Tempo (segundos): 2.68400000000000016342482922482304275035858154296875
+---------------------
+---MEDIO_PEQUENO---
+Ciclos necessarios: 270
+Tempo (segundos): 0.27000000000000001776356839400250464677810668945312
+---------------------
+---MEDIO_MEDIO---
+Ciclos necessarios: 2524
+Tempo (segundos): 2.52400000000000002131628207280300557613372802734375
+---------------------
+---MEDIO_GRANDE---
+Ciclos necessarios: 25882
+Tempo (segundos): 25.88200000000000144950718095060437917709350585937500
+---------------------
+---GRANDE_PEQUENO---
+Ciclos necessarios: 2611
+Tempo (segundos): 2.61100000000000020961010704922955483198165893554688
+---------------------
+---GRANDE_MEDIO---
+Ciclos necessarios: 24800
+Tempo (segundos): 24.80000000000000071054273576010018587112426757812500
+---------------------
+---GRANDE_GRANDE---
+Ciclos necessarios: 252293
+Tempo (segundos): 252.29300000000000636646291241049766540527343750000000
+---------------------
+
+tempo TOTAL (minutos):  5.1900833333
+Ciclos necessarios TOTAL: 311405
